@@ -19,6 +19,7 @@ public interface TutorialRepository extends JpaRepository<Tutorial, Long> {
 	List<Tutorial> findByTitleLike(String title);
 
 	@Query("SELECT t FROM Tutorial t WHERE LOWER(t.title) LIKE LOWER(CONCAT('%', ?1,'%'))")  // ?1 placeholder de title
+	// concat pour concaténation de title.toLowerCase avec %
 	List<Tutorial>	findByTitleLikeCaseInsensitive(String title);
 	
 	@Query("SELECT t FROM Tutorial t WHERE t.level >= ?1")
