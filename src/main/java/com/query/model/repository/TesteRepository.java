@@ -11,5 +11,6 @@ public interface TesteRepository extends JpaRepository<Teste, Integer> {
 List<Teste> findByNoteGreaterThan(int note);
 @Query("SELECT t From Teste t WHERE note> 16 ORDER BY t.candidat")
 List<Teste> findBest();
+List<Teste> findByRemarque(String remarque);
 
 }

@@ -40,6 +40,11 @@ TesteRepository testesRepo;
 		List<Teste> Listl=new ArrayList<Teste>();
 		Listl=testesRepo.findBest();
 		showTestes(Listl);
+		System.out.println("liste des redoublants");
+		List<Teste> listrm=new ArrayList<Teste>();
+		listrm=testesRepo.findByRemarque("redoublement");
+		showTestes(listrm);
+		
 
 		
 		
