@@ -29,21 +29,21 @@ TesteRepository testesRepo;
 	@Override
 	public void run(String... args) throws Exception {
 		testesRepo.save(new Teste("12/03/2022", "mark", 19, "excellent"));
-		testesRepo.save(new Teste("14/02/2022", "Bill gates", 10, "passable"));
+	testesRepo.save(new Teste("14/02/2022", "Bill gates", 10, "passable"));
 		testesRepo.save(new Teste("12/12/2021", "Jeff Bezos", 9, "redoublement"));
 		testesRepo.save(new Teste("12/02/2022","Jack maa", 17, "trés bien"));
-		System.out.println("liste des étudiant qui ont bien passé le teste: ");
-		List<Teste> lp=new ArrayList<Teste>();
-		lp=testesRepo.findByNoteGreaterThan(9);
-		showTestes(lp);
-		System.out.println("liste des lauréats: ");
-		List<Teste> Listl=new ArrayList<Teste>();
-		Listl=testesRepo.findBest();
-		showTestes(Listl);
-		System.out.println("liste des redoublants");
-		List<Teste> listrm=new ArrayList<Teste>();
-		listrm=testesRepo.findByRemarque("redoublement");
-		showTestes(listrm);
+//		System.out.println("liste des étudiant qui ont bien passé le teste: ");
+//		List<Teste> lp=new ArrayList<Teste>();
+//		lp=testesRepo.findByNoteGreaterThan(9);
+//		showTestes(lp);
+//		System.out.println("liste des lauréats: ");
+//		List<Teste> Listl=new ArrayList<Teste>();
+//		Listl=testesRepo.findBest();
+//		showTestes(Listl);
+//		System.out.println("liste des redoublants");
+//		List<Teste> listrm=new ArrayList<Teste>();
+//		listrm=testesRepo.findByRemarque("redoublement");
+//		showTestes(listrm);
 		
 
 		
