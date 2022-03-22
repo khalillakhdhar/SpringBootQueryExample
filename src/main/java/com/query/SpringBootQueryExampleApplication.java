@@ -11,6 +11,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.query.model.TestInt;
 import com.query.model.Teste;
 import com.query.model.Tutorial;
 import com.query.model.repository.TesteRepository;
@@ -32,14 +33,15 @@ TesteRepository testesRepo;
 	testesRepo.save(new Teste("14/02/2022", "Bill gates", 10, "passable"));
 		testesRepo.save(new Teste("12/12/2021", "Jeff Bezos", 9, "redoublement"));
 		testesRepo.save(new Teste("12/02/2022","Jack maa", 17, "trés bien"));
+		
 //		System.out.println("liste des étudiant qui ont bien passé le teste: ");
 //		List<Teste> lp=new ArrayList<Teste>();
 //		lp=testesRepo.findByNoteGreaterThan(9);
 //		showTestes(lp);
-//		System.out.println("liste des lauréats: ");
-//		List<Teste> Listl=new ArrayList<Teste>();
-//		Listl=testesRepo.findBest();
-//		showTestes(Listl);
+		System.out.println("liste des lauréats: ");
+		List<TestInt> Listl=new ArrayList<TestInt>();
+		Listl=testesRepo.findBest();
+		showTestesInt(Listl);
 //		System.out.println("liste des redoublants");
 //		List<Teste> listrm=new ArrayList<Teste>();
 //		listrm=testesRepo.findByRemarque("redoublement");
@@ -81,6 +83,9 @@ TesteRepository testesRepo;
 		tutorials.forEach(System.out::println); // afficher les elements de foreach	
 	}
 	private void showTestes(List<Teste> testes) {
+		testes.forEach(System.out::println); // afficher les elements de foreach	
+	}
+	private void showTestesInt(List<TestInt> testes) {
 		testes.forEach(System.out::println); // afficher les elements de foreach	
 	}
 }

@@ -54,7 +54,7 @@ public class Teste implements Serializable {
 	}
 	@Override
 	public String toString() {
-		return "Teste [id=" + id + ", date=" + date + ", candidat=" + candidat + ", note=" + note + ", remarque="
+		return "Teste [ candidat=" + candidat + ", note=" + note + ", remarque="
 				+ remarque + "]";
 	}
 	public Teste() {
@@ -64,6 +64,12 @@ public class Teste implements Serializable {
 	public Teste(String date, String candidat, @Min(0) int note, String remarque) {
 		super();
 		this.date = date;
+		this.candidat = candidat;
+		this.note = note;
+		this.remarque = remarque;
+	}
+	public Teste(String candidat, @Min(0) int note, String remarque) {
+		super();
 		this.candidat = candidat;
 		this.note = note;
 		this.remarque = remarque;
